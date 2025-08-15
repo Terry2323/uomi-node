@@ -26,6 +26,8 @@ use sc_cli::RunCmd;
 pub struct Cli {
     /// Possible subcommand with parameters.
     #[clap(subcommand)]
+    mod status;
+use status::StatusCmd;
     pub subcommand: Option<Subcommand>,
 
     #[allow(missing_docs)]
