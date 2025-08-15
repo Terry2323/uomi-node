@@ -68,7 +68,14 @@ pub enum Subcommand {
 
     /// Build a chain specification.
     BuildSpec(sc_cli::BuildSpecCmd),
+BuildSpec(sc_cli::BuildSpecCmd),
 
+    /// Display node health and sync status.
+    #[clap(subcommand)]
+    Status(StatusCmd),
+
+    /// Validate blocks.
+    ValidateBlocks(sc_cli::CheckBlockCmd),
     /// Validate blocks.
     CheckBlock(sc_cli::CheckBlockCmd),
 
