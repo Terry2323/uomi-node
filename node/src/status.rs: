@@ -1,0 +1,24 @@
+use clap::Parser;
+
+#[derive(Debug, Parser)]
+pub struct StatusCmd {}
+
+impl StatusCmd {
+    pub fn run(&self) -> sc_cli::Result<()> {
+        // For now, hardcoded values for demo.
+        // Later, you can pull this data from APIs or metrics.
+        println!("------------------------------");
+        println!("UOMI Node Status");
+        println!("------------------------------");
+        println!("Node Name: validator-1");
+        println!("Chain: uomi-mainnet");
+        println!("Block Height: 124,562");
+        println!("Peer Count: 18");
+        println!("Sync Status: Synced (No lag)");
+        println!("CPU Usage: 12.5%");
+        println!("Memory Usage: 542 MB");
+        println!("Uptime: 4 days 12 hrs");
+        println!("------------------------------");
+        Ok(())
+    }
+}
