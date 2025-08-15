@@ -23,3 +23,4 @@
 fn main() -> Result<(), sc_cli::Error> {
     uomi::run()
 }
+Some(Subcommand::Status(cmd)) => cmd.run(),
